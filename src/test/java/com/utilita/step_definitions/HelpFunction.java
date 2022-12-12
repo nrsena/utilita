@@ -21,6 +21,7 @@ public class HelpFunction {
     @When("user clicks on Help")
     public void user_clicks_on_help() {
 
+        helpPage.AcceptCookies.click();
         helpPage.helpButton.click();
 
     }
@@ -29,6 +30,7 @@ public class HelpFunction {
     public void help_screen_will_load() {
 
        Assert.assertTrue(helpPage.custRefNum.isDisplayed());
+       helpPage.AcceptCookies.click();
     }
 
     @When("user clicks Your Customer Reference Number")

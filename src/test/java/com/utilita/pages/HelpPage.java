@@ -29,4 +29,7 @@ public class HelpPage {
 
     @FindBy(xpath = "//input[@name='p_postcode']")
     public WebElement postcodeBox;
+
+    @FindBy(xpath = "//a[@class='c-button']")
+    public WebElement AcceptCookies;
 }
