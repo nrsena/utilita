@@ -28,7 +28,7 @@ public class HelpFunction {
     @Then("Help screen will load")
     public void help_screen_will_load() {
 
-        Assert.assertTrue(Driver.getDriver().getTitle().equals("???"));
+       Assert.assertTrue(helpPage.custRefNum.isDisplayed());
     }
 
     @When("user clicks Your Customer Reference Number")
@@ -40,11 +40,15 @@ public class HelpFunction {
     @Given("no details are filled out")
     public void no_details_are_filled_out() {
 
+        Assert.assertTrue(helpPage.emailBox.getText().isBlank());
+
+        Assert.assertTrue(helpPage.postcodeBox.getText().isBlank());
 
     }
 
     @When("user clicks on Find button")
     public void user_clicks_on_find_button() {
+
         helpPage.findButton.click();
 
     }

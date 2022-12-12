@@ -23,4 +23,10 @@ public class HelpPage {
 
     @FindBy(xpath = "//div[contains(text(),'provide')]")
     public WebElement errorMessage;
+
+    @FindBy(xpath = "//input[@id='email-input']")
+    public WebElement emailBox;
+
+    @FindBy(xpath = "//input[@name='p_postcode']")
+    public WebElement postcodeBox;
 }
